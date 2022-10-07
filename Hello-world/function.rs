@@ -23,7 +23,11 @@ fn main() {
     // let arr = [1, 2, 3, 4, 5];
     // calculate_mean(arr);
 
-    print!("{}", test_divisibility_by_3_4(19));
+    // print!("{}", test_divisibility_by_3_4(19));
+
+    //println!("{:?}", arr_square([1, 2, 3, 4, 5]));
+    // println!("{}", recur_function(15));
+    print!("{}", fib(7));
 }
 
 /* Normal return function */
@@ -60,3 +64,47 @@ fn main() {
 //         return -1;
 //     }
 // }
+
+// /* Challenge 2: Return an Array of Squares */
+// fn arr_square(mut arr: [i32; 5]) -> [i32; 5] {
+//     // Write code here!
+//     for i in 0..arr.len() {
+//         arr[i] *= arr[i];
+//     }
+//     return arr;
+// }
+
+// /* Recursive Function */
+// fn recur_function(n: i32) -> i32 {
+//     if n == 3 {
+//         return 1;
+//     } else {
+//         return n + recur_function(n - 1);
+//     }
+// }
+
+/* Challenge to create fib function */
+fn fib (n:i32) -> i32 {
+    // if n == 0 {
+    //     return 0;
+    // } else if n == 1 {
+    //     return 1;
+    // }
+    // else {
+    //     return fib(n-1) + fib(n-2);
+    // }
+
+    //using match method 
+
+    match n {
+        0 => 0,
+        1 => 1,
+        _ => fib(n-1) + fib(n-2),
+    }
+}
+
+
+
+
+
+
