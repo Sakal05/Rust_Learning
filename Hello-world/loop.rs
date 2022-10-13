@@ -45,25 +45,25 @@ fn main() {
     //         println!("{} * {} = {}", i, j, i * j);
     //    }
     //  }
-    test(5);
+    test(4);
 }
 
 //funciton to find factorial
-// fn test(mut n: i32) {
+fn test(mut n: i32) {
 
-//     let mut fact = 1;
-//     for i in 1..n+1
-//     {
-//         fact = fact * i;
-//     }
+    let mut fact = 1;
+    for i in 1..n+1
+    {
+        fact = fact * i;
+    }
 
-//     // while (n>0)
-//     // {
-//     //     fact = fact*n;
-//     //     n -= 1;
-//     // }
-//     print!("{}", fact);
-// }
+    // while (n>0)
+    // {
+    //     fact = fact*n;
+    //     n -= 1;
+    // }
+    print!("{}", fact);
+}
 
 // //challenge 2
 // fn test(mut x: i32) {

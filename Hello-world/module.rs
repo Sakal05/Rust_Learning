@@ -193,23 +193,23 @@ The task is to call the root function my_area that calculates the area of a tria
  */
 
 
-mod shapes{
-    pub fn triangle_area(base : i32, height : i32) {
-        // call the root function 'my_area' and print the return value
-        let result:f32 = super::my_area(base, height);
-        print!("{}", result);
-    }
-  }
+// mod shapes{
+//     pub fn triangle_area(base : i32, height : i32) {
+//         // call the root function 'my_area' and print the return value
+//         let result:f32 = super::my_area(base, height);
+//         print!("{}", result);
+//     }
+//   }
 
-fn my_area(base:i32, height:i32) -> f32 {
-    let b = base as f32;
-    let h = height as f32;
-    return ((b*h)/2.0) as f32;
-}
+// fn my_area(base:i32, height:i32) -> f32 {
+//     let b = base as f32;
+//     let h = height as f32;
+//     return ((b*h)/2.0) as f32;
+// }
 
-fn main() {
-    let b = 5;
-    let h = 5;
+// fn main() {
+//     let b = 5;
+//     let h = 5;
     
-    shapes::triangle_area(b, h);
-}
+//     shapes::triangle_area(b, h);
+// }

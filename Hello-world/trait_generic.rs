@@ -86,42 +86,74 @@ They can be applied to methods, functions, structures, enumerations, collections
 //   print_vec(&str_vec); // pass vector of type String to the function
 // }
 
-#![allow(dead_code)]
-//declare a structure
-struct Car {
-    owner_age: i32,
-}
-struct Motorbike {
-    owner_age: i32,
-}
-//declare a trait
-trait Drive {
-    fn can_drive(&self) -> i32;
-}
-//implement the trait
-impl Drive for Car {
-    fn can_drive(&self) -> i32 {
-        if self.owner_age < 18 {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-}
-impl Drive for Motorbike {
-    fn can_drive(&self) -> i32 {
-        if self.owner_age < 14 {
-            return 0;
-        }
-        else {
-            return 1;
-        }
-    }
+// #![allow(dead_code)]
+// //declare a structure
+// struct Car {
+//     owner_age: i32,
+// }
+// struct Motorbike {
+//     owner_age: i32,
+// }
+// //declare a trait
+// trait Drive {
+//     fn can_drive(&self) -> i32;
+// }
+// //implement the trait
+// impl Drive for Car {
+//     fn can_drive(&self) -> i32 {
+//         if self.owner_age < 18 {
+//             return 0;
+//         } else {
+//             return 1;
+//         }
+//     }
+// }
+// impl Drive for Motorbike {
+//     fn can_drive(&self) -> i32 {
+//         if self.owner_age < 14 {
+//             return 0;
+//         }
+//         else {
+//             return 1;
+//         }
+//     }
+// }
+
+// fn main() {
+//     let c1 = Car { owner_age: 18 };
+//     let m1 = Motorbike { owner_age: 15};
+//     println!("{}", c1.can_drive());
+//     println!("{}", m1.can_drive());
+// }
+
+#[derive(Debug, PartialEq, Eq)]
+#[allow(dead_code)]
+
+enum Comparison {
+    Equal,
+    Sublist,
+    Superlist,
+    Unequal,
 }
 
+
+
+fn category(_a: &[i64], _b: &[i64]) -> Option<Comparison> {
+    //Your code goes here!
+    if _a.len() < _b.len() {
+        return Some(Comparison::Sublist);
+    }
+    else if _a.len() > _b.len() {
+        return Some(Comparison::Superlist);
+    }
+    else if _a.len() == _b.len() {
+        return Some(Comparison::Equal);
+    }
+    else {
+        return Some(Comparison::Unequal);
+    }
+} 
+
 fn main() {
-    let c1 = Car { owner_age: 18 };
-    let m1 = Motorbike { owner_age: 15};
-    println!("{}", c1.can_drive());
-    println!("{}", m1.can_drive());
+    println!("{:?}", category(&[1,2,3,4], &[1,2,3]));
 }
